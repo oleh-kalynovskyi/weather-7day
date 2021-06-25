@@ -1,4 +1,15 @@
-body {
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body, html {
+  margin: 0px;
+  background: rgb(47, 159, 172);
+  min-height: 100vh; 
+
+  scroll-behavior: smooth;
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -7,7 +18,108 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.react-tabs__tab-panel {
+  background-color: rgba(255, 248, 220, 0.268);
+  border-radius: 10px;
+}
+.react-tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+}
+.react-tabs__tab {
+  text-align: center !important;
+}
+.react-tabs__tab--selected {
+  border: none !important;
+}
+.react-tabs__tab-panel .react-tabs__tab {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+.react-tabs__tab a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  width: 1124px;
+  padding-bottom: 50px;
+}
+
+.site-title {
+  text-decoration: none;
+  color: blue;
+  font-size: 30px;
+  text-align: center;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.button-get-weath {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  font-weight: bold;
+  transition: .2s;
+}
+.button-get-weath:hover {
+  background-color: rgb(11, 27, 29);
+  color: white;
+}
+
+.day-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.curent-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.curent-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #77ffff;
+  border-radius: 5px;
+  padding: 20px;
+}
+.curent-weather span {
+  font-weight: bold;
+}
+
+.react-tabs span {
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .react-tabs__tab-panel .react-tabs__tab {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .react-tabs__tab-panel {
+    margin: 30px 0;
+  }
 }
